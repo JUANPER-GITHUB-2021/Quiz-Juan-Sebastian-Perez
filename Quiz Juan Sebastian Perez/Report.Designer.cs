@@ -35,7 +35,7 @@ namespace Quiz_Juan_Sebastian_Perez
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Report";
