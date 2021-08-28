@@ -29,27 +29,28 @@ namespace Quiz_Juan_Sebastian_Perez
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txtNombreclient = new System.Windows.Forms.TextBox();
             this.btnguardar = new System.Windows.Forms.Button();
             this.LblNombre = new System.Windows.Forms.Label();
-            this.datefechapedido = new System.Windows.Forms.DateTimePicker();
             this.Lblpago = new System.Windows.Forms.Label();
             this.LblDate = new System.Windows.Forms.Label();
             this.Lbltelcontact = new System.Windows.Forms.Label();
             this.Lblemail = new System.Windows.Forms.Label();
             this.LblDirección = new System.Windows.Forms.Label();
             this.txtdireccion = new System.Windows.Forms.TextBox();
-            this.txtnumerocontact = new System.Windows.Forms.TextBox();
             this.txtemailclient = new System.Windows.Forms.TextBox();
             this.Lblentrega = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Lblintro = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rdbtnPagoE = new System.Windows.Forms.RadioButton();
             this.rdbtnPagoL = new System.Windows.Forms.RadioButton();
             this.rdbtnEntregaD = new System.Windows.Forms.RadioButton();
             this.rdbtnEntregaR = new System.Windows.Forms.RadioButton();
+            this.rhtxtboxreporte = new System.Windows.Forms.RichTextBox();
+            this.Datefecha = new System.Windows.Forms.DateTimePicker();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.txtguardado = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +60,7 @@ namespace Quiz_Juan_Sebastian_Perez
             this.txtNombreclient.Name = "txtNombreclient";
             this.txtNombreclient.Size = new System.Drawing.Size(302, 20);
             this.txtNombreclient.TabIndex = 2;
+            this.txtNombreclient.TextChanged += new System.EventHandler(this.txtNombreclient_TextChanged);
             // 
             // btnguardar
             // 
@@ -83,14 +85,6 @@ namespace Quiz_Juan_Sebastian_Perez
             this.LblNombre.Text = "Nombre Completo :";
             this.LblNombre.Click += new System.EventHandler(this.label1_Click);
             // 
-            // datefechapedido
-            // 
-            this.datefechapedido.Location = new System.Drawing.Point(118, 115);
-            this.datefechapedido.Name = "datefechapedido";
-            this.datefechapedido.Size = new System.Drawing.Size(200, 20);
-            this.datefechapedido.TabIndex = 5;
-            this.datefechapedido.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
             // Lblpago
             // 
             this.Lblpago.AutoSize = true;
@@ -114,7 +108,7 @@ namespace Quiz_Juan_Sebastian_Perez
             // Lbltelcontact
             // 
             this.Lbltelcontact.AutoSize = true;
-            this.Lbltelcontact.Location = new System.Drawing.Point(0, 192);
+            this.Lbltelcontact.Location = new System.Drawing.Point(0, 193);
             this.Lbltelcontact.Name = "Lbltelcontact";
             this.Lbltelcontact.Size = new System.Drawing.Size(112, 13);
             this.Lbltelcontact.TabIndex = 8;
@@ -147,14 +141,6 @@ namespace Quiz_Juan_Sebastian_Perez
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(302, 20);
             this.txtdireccion.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.txtdireccion, "Si el cliente retira en el local, no es necesaria su dirección");
-            // 
-            // txtnumerocontact
-            // 
-            this.txtnumerocontact.Location = new System.Drawing.Point(118, 188);
-            this.txtnumerocontact.Name = "txtnumerocontact";
-            this.txtnumerocontact.Size = new System.Drawing.Size(302, 20);
-            this.txtnumerocontact.TabIndex = 12;
             // 
             // txtemailclient
             // 
@@ -185,8 +171,7 @@ namespace Quiz_Juan_Sebastian_Perez
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Quiz_Juan_Sebastian_Perez.Properties.Resources.LOGO_HAPPY_SWEET_opt;
-            this.pictureBox1.Location = new System.Drawing.Point(426, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(465, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(394, 367);
             this.pictureBox1.TabIndex = 18;
@@ -237,12 +222,58 @@ namespace Quiz_Juan_Sebastian_Perez
             this.rdbtnEntregaR.UseVisualStyleBackColor = true;
             this.rdbtnEntregaR.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
+            // rhtxtboxreporte
+            // 
+            this.rhtxtboxreporte.Location = new System.Drawing.Point(910, 56);
+            this.rhtxtboxreporte.Name = "rhtxtboxreporte";
+            this.rhtxtboxreporte.Size = new System.Drawing.Size(299, 338);
+            this.rhtxtboxreporte.TabIndex = 28;
+            this.rhtxtboxreporte.Text = "";
+            // 
+            // Datefecha
+            // 
+            this.Datefecha.Location = new System.Drawing.Point(118, 115);
+            this.Datefecha.Name = "Datefecha";
+            this.Datefecha.Size = new System.Drawing.Size(211, 20);
+            this.Datefecha.TabIndex = 29;
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(118, 189);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(154, 20);
+            this.txttelefono.TabIndex = 30;
+            // 
+            // txtguardado
+            // 
+            this.txtguardado.Location = new System.Drawing.Point(589, 1);
+            this.txtguardado.Name = "txtguardado";
+            this.txtguardado.Size = new System.Drawing.Size(147, 20);
+            this.txtguardado.TabIndex = 31;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label1.Location = new System.Drawing.Point(1018, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 26);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "REPORTE";
+            this.label1.Click += new System.EventHandler(this.label1_Click_3);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(854, 425);
+            this.ClientSize = new System.Drawing.Size(1293, 442);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtguardado);
+            this.Controls.Add(this.txttelefono);
+            this.Controls.Add(this.Datefecha);
+            this.Controls.Add(this.rhtxtboxreporte);
             this.Controls.Add(this.rdbtnEntregaR);
             this.Controls.Add(this.rdbtnEntregaD);
             this.Controls.Add(this.rdbtnPagoL);
@@ -251,14 +282,12 @@ namespace Quiz_Juan_Sebastian_Perez
             this.Controls.Add(this.Lblintro);
             this.Controls.Add(this.Lblentrega);
             this.Controls.Add(this.txtemailclient);
-            this.Controls.Add(this.txtnumerocontact);
             this.Controls.Add(this.txtdireccion);
             this.Controls.Add(this.LblDirección);
             this.Controls.Add(this.Lblemail);
             this.Controls.Add(this.Lbltelcontact);
             this.Controls.Add(this.LblDate);
             this.Controls.Add(this.Lblpago);
-            this.Controls.Add(this.datefechapedido);
             this.Controls.Add(this.LblNombre);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.txtNombreclient);
@@ -276,25 +305,27 @@ namespace Quiz_Juan_Sebastian_Perez
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtNombreclient;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Label LblNombre;
-        private System.Windows.Forms.DateTimePicker datefechapedido;
         private System.Windows.Forms.Label Lblpago;
         private System.Windows.Forms.Label LblDate;
         private System.Windows.Forms.Label Lbltelcontact;
         private System.Windows.Forms.Label Lblemail;
         private System.Windows.Forms.Label LblDirección;
-        private System.Windows.Forms.TextBox txtdireccion;
-        private System.Windows.Forms.TextBox txtnumerocontact;
-        private System.Windows.Forms.TextBox txtemailclient;
         private System.Windows.Forms.Label Lblentrega;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label Lblintro;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RadioButton rdbtnPagoE;
-        private System.Windows.Forms.RadioButton rdbtnPagoL;
-        private System.Windows.Forms.RadioButton rdbtnEntregaD;
-        private System.Windows.Forms.RadioButton rdbtnEntregaR;
+        public System.Windows.Forms.RadioButton rdbtnPagoE;
+        public System.Windows.Forms.RadioButton rdbtnPagoL;
+        public System.Windows.Forms.RadioButton rdbtnEntregaD;
+        public System.Windows.Forms.RadioButton rdbtnEntregaR;
+        public System.Windows.Forms.TextBox txtNombreclient;
+        public System.Windows.Forms.TextBox txtdireccion;
+        public System.Windows.Forms.TextBox txtemailclient;
+        private System.Windows.Forms.RichTextBox rhtxtboxreporte;
+        private System.Windows.Forms.DateTimePicker Datefecha;
+        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.TextBox txtguardado;
+        private System.Windows.Forms.Label label1;
     }
 }

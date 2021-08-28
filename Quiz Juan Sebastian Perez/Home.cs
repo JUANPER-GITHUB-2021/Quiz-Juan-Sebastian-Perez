@@ -49,6 +49,22 @@ namespace Quiz_Juan_Sebastian_Perez
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            txtguardado.Visible = false;
+            string pago = "No hay datos";
+            string entrega = "No hay datos";
+            if (rdbtnPagoE.Checked == true) ;
+                pago = "El pago es en efectivo";
+            if (rdbtnPagoL.Checked == true) ;
+                pago = "El pago es en Línea";
+            if (rdbtnEntregaR.Checked == true) ;
+                entrega = "La entrega es en el local";
+            if (rdbtnEntregaD.Checked == true) ;
+                entrega = "La entrega es a domicilio";
+            rhtxtboxreporte.Text = "Datos del pedido \n" + "Nombre completo: " + txtNombreclient.Text + "\n" + "Fecha: " + Datefecha.Text + "\n" + "Email: " 
+            + txtemailclient.Text + "\n" + "Teléfono de contacto: " + txttelefono.Text + "\n" + "Dirección completa: " + txtdireccion.Text + "\n" + "Método de pago: " 
+            + pago + "\n" + "Forma de entrega: " + entrega + "-------------------------------------------------------------------- \n" + txtguardado.Text;
+            Clipboard.SetText(rhtxtboxreporte.Text);
+            txtguardado.Text = Clipboard.GetText();
 
         }
 
@@ -98,6 +114,26 @@ namespace Quiz_Juan_Sebastian_Perez
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rhtxtboxdatos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreclient_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_3(object sender, EventArgs e)
         {
 
         }
