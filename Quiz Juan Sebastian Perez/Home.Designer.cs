@@ -44,10 +44,12 @@ namespace Quiz_Juan_Sebastian_Perez
             this.txtemailclient = new System.Windows.Forms.TextBox();
             this.Lblentrega = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.chListBoxPago = new System.Windows.Forms.CheckedListBox();
             this.Lblintro = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.chListBoxentrega = new System.Windows.Forms.CheckedListBox();
+            this.rdbtnPagoE = new System.Windows.Forms.RadioButton();
+            this.rdbtnPagoL = new System.Windows.Forms.RadioButton();
+            this.rdbtnEntregaD = new System.Windows.Forms.RadioButton();
+            this.rdbtnEntregaR = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,17 +62,20 @@ namespace Quiz_Juan_Sebastian_Perez
             // 
             // btnguardar
             // 
+            this.btnguardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnguardar.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnguardar.Location = new System.Drawing.Point(167, 363);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(105, 31);
             this.btnguardar.TabIndex = 3;
             this.btnguardar.Text = "Guardar";
-            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.UseVisualStyleBackColor = false;
             this.btnguardar.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // LblNombre
             // 
             this.LblNombre.AutoSize = true;
+            this.LblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombre.Location = new System.Drawing.Point(15, 82);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(97, 13);
@@ -89,11 +94,11 @@ namespace Quiz_Juan_Sebastian_Perez
             // Lblpago
             // 
             this.Lblpago.AutoSize = true;
-            this.Lblpago.Location = new System.Drawing.Point(24, 255);
+            this.Lblpago.Location = new System.Drawing.Point(24, 267);
             this.Lblpago.Name = "Lblpago";
             this.Lblpago.Size = new System.Drawing.Size(88, 13);
             this.Lblpago.TabIndex = 6;
-            this.Lblpago.Text = "Metodo de pago:";
+            this.Lblpago.Text = "Método de pago:";
             this.Lblpago.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // LblDate
@@ -113,7 +118,7 @@ namespace Quiz_Juan_Sebastian_Perez
             this.Lbltelcontact.Name = "Lbltelcontact";
             this.Lbltelcontact.Size = new System.Drawing.Size(112, 13);
             this.Lbltelcontact.TabIndex = 8;
-            this.Lbltelcontact.Text = "Telefono de contacto:";
+            this.Lbltelcontact.Text = "Teléfono de contacto:";
             this.Lbltelcontact.Click += new System.EventHandler(this.Lbltelcontact_Click);
             // 
             // Lblemail
@@ -161,34 +166,22 @@ namespace Quiz_Juan_Sebastian_Perez
             // Lblentrega
             // 
             this.Lblentrega.AutoSize = true;
-            this.Lblentrega.Location = new System.Drawing.Point(19, 309);
+            this.Lblentrega.Location = new System.Drawing.Point(19, 307);
             this.Lblentrega.Name = "Lblentrega";
             this.Lblentrega.Size = new System.Drawing.Size(93, 13);
             this.Lblentrega.TabIndex = 14;
             this.Lblentrega.Text = "Forma de entrega:";
             // 
-            // chListBoxPago
-            // 
-            this.chListBoxPago.FormattingEnabled = true;
-            this.chListBoxPago.Items.AddRange(new object[] {
-            "Efectivo",
-            "En línea"});
-            this.chListBoxPago.Location = new System.Drawing.Point(118, 257);
-            this.chListBoxPago.Name = "chListBoxPago";
-            this.chListBoxPago.Size = new System.Drawing.Size(120, 34);
-            this.chListBoxPago.TabIndex = 16;
-            this.chListBoxPago.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged_1);
-            // 
             // Lblintro
             // 
             this.Lblintro.AutoSize = true;
             this.Lblintro.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lblintro.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.Lblintro.ForeColor = System.Drawing.Color.SteelBlue;
             this.Lblintro.Location = new System.Drawing.Point(52, 27);
             this.Lblintro.Name = "Lblintro";
             this.Lblintro.Size = new System.Drawing.Size(335, 26);
             this.Lblintro.TabIndex = 17;
-            this.Lblintro.Text = "REPOSTERIA Y PANADERIA HAPPY SWEET";
+            this.Lblintro.Text = "REPOSTERÍA Y PANADERÍA HAPPY SWEET";
             // 
             // pictureBox1
             // 
@@ -199,26 +192,63 @@ namespace Quiz_Juan_Sebastian_Perez
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
-            // chListBoxentrega
+            // rdbtnPagoE
             // 
-            this.chListBoxentrega.FormattingEnabled = true;
-            this.chListBoxentrega.Items.AddRange(new object[] {
-            "Retiro en el local",
-            "Domicilio"});
-            this.chListBoxentrega.Location = new System.Drawing.Point(118, 309);
-            this.chListBoxentrega.Name = "chListBoxentrega";
-            this.chListBoxentrega.Size = new System.Drawing.Size(120, 34);
-            this.chListBoxentrega.TabIndex = 19;
+            this.rdbtnPagoE.AutoSize = true;
+            this.rdbtnPagoE.Location = new System.Drawing.Point(156, 265);
+            this.rdbtnPagoE.Name = "rdbtnPagoE";
+            this.rdbtnPagoE.Size = new System.Drawing.Size(64, 17);
+            this.rdbtnPagoE.TabIndex = 20;
+            this.rdbtnPagoE.TabStop = true;
+            this.rdbtnPagoE.Text = "Efectivo";
+            this.rdbtnPagoE.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnPagoL
+            // 
+            this.rdbtnPagoL.AutoSize = true;
+            this.rdbtnPagoL.Location = new System.Drawing.Point(293, 265);
+            this.rdbtnPagoL.Name = "rdbtnPagoL";
+            this.rdbtnPagoL.Size = new System.Drawing.Size(65, 17);
+            this.rdbtnPagoL.TabIndex = 21;
+            this.rdbtnPagoL.TabStop = true;
+            this.rdbtnPagoL.Text = "En línea";
+            this.rdbtnPagoL.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnEntregaD
+            // 
+            this.rdbtnEntregaD.AutoSize = true;
+            this.rdbtnEntregaD.Location = new System.Drawing.Point(293, 305);
+            this.rdbtnEntregaD.Name = "rdbtnEntregaD";
+            this.rdbtnEntregaD.Size = new System.Drawing.Size(106, 17);
+            this.rdbtnEntregaD.TabIndex = 22;
+            this.rdbtnEntregaD.TabStop = true;
+            this.rdbtnEntregaD.Text = "Envío a domicilio";
+            this.rdbtnEntregaD.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnEntregaR
+            // 
+            this.rdbtnEntregaR.AutoSize = true;
+            this.rdbtnEntregaR.Location = new System.Drawing.Point(156, 305);
+            this.rdbtnEntregaR.Name = "rdbtnEntregaR";
+            this.rdbtnEntregaR.Size = new System.Drawing.Size(93, 17);
+            this.rdbtnEntregaR.TabIndex = 23;
+            this.rdbtnEntregaR.TabStop = true;
+            this.rdbtnEntregaR.Text = "Retiro en local";
+            this.rdbtnEntregaR.UseVisualStyleBackColor = true;
+            this.rdbtnEntregaR.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(854, 425);
-            this.Controls.Add(this.chListBoxentrega);
+            this.Controls.Add(this.rdbtnEntregaR);
+            this.Controls.Add(this.rdbtnEntregaD);
+            this.Controls.Add(this.rdbtnPagoL);
+            this.Controls.Add(this.rdbtnPagoE);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Lblintro);
-            this.Controls.Add(this.chListBoxPago);
             this.Controls.Add(this.Lblentrega);
             this.Controls.Add(this.txtemailclient);
             this.Controls.Add(this.txtnumerocontact);
@@ -260,9 +290,11 @@ namespace Quiz_Juan_Sebastian_Perez
         private System.Windows.Forms.TextBox txtemailclient;
         private System.Windows.Forms.Label Lblentrega;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.CheckedListBox chListBoxPago;
         private System.Windows.Forms.Label Lblintro;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.CheckedListBox chListBoxentrega;
+        private System.Windows.Forms.RadioButton rdbtnPagoE;
+        private System.Windows.Forms.RadioButton rdbtnPagoL;
+        private System.Windows.Forms.RadioButton rdbtnEntregaD;
+        private System.Windows.Forms.RadioButton rdbtnEntregaR;
     }
 }

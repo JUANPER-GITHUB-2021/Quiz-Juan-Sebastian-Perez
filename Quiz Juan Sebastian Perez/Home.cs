@@ -97,5 +97,9 @@ namespace Quiz_Juan_Sebastian_Perez
 
         }
 
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
