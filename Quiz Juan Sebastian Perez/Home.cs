@@ -137,5 +137,12 @@ namespace Quiz_Juan_Sebastian_Perez
         {
 
         }
+
+        private void btnreporte_Click(object sender, EventArgs e)
+        {
+            string Reporte = rhtxtboxreporte.Text;
+            Form Formulario = new Report(Reporte);
+            Formulario.Show();
+        }
     }
 }

@@ -51,6 +51,7 @@ namespace Quiz_Juan_Sebastian_Perez
             this.txttelefono = new System.Windows.Forms.TextBox();
             this.txtguardado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnreporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@ namespace Quiz_Juan_Sebastian_Perez
             // 
             this.btnguardar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnguardar.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.Location = new System.Drawing.Point(167, 363);
+            this.btnguardar.Location = new System.Drawing.Point(90, 363);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(105, 31);
             this.btnguardar.TabIndex = 3;
@@ -263,12 +264,25 @@ namespace Quiz_Juan_Sebastian_Perez
             this.label1.Text = "REPORTE";
             this.label1.Click += new System.EventHandler(this.label1_Click_3);
             // 
+            // btnreporte
+            // 
+            this.btnreporte.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnreporte.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreporte.Location = new System.Drawing.Point(253, 363);
+            this.btnreporte.Name = "btnreporte";
+            this.btnreporte.Size = new System.Drawing.Size(105, 31);
+            this.btnreporte.TabIndex = 33;
+            this.btnreporte.Text = "Reporte";
+            this.btnreporte.UseVisualStyleBackColor = false;
+            this.btnreporte.Click += new System.EventHandler(this.btnreporte_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1293, 442);
+            this.Controls.Add(this.btnreporte);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtguardado);
             this.Controls.Add(this.txttelefono);
@@ -327,5 +341,6 @@ namespace Quiz_Juan_Sebastian_Perez
         private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.TextBox txtguardado;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnreporte;
     }
 }
